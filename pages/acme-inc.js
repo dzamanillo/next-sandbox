@@ -24,18 +24,20 @@ export default function Acme() {
 					<div>
 						<h3>Ticket Type</h3>
 						<ul>
-							<li>Bug: Something isn't working properly</li>
-							<li>Design: Make update to current design</li>
-							<li>New Feature: Request feature which will lead to discovery</li>
+							<li>Bug - Something isn't working properly</li>
+							<li>Design - Make update to current design</li>
+							<li>
+								New Feature - Request feature which will lead to discovery
+							</li>
 						</ul>
 					</div>
 					<div>
 						<h3>Priority</h3>
 						<ul>
-							<li>Urgent: Blah Blah</li>
-							<li>High: Blah Blah</li>
-							<li>Normal: Blah Blah</li>
-							<li>Low: Blah Blah</li>
+							<li>Urgent - Blah Blah</li>
+							<li>High - Blah Blah</li>
+							<li>Normal - Blah Blah</li>
+							<li>Low - Blah Blah</li>
 						</ul>
 					</div>
 				</div>
