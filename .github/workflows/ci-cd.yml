@@ -68,13 +68,12 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-region: us-west-1
 
       # Deploy push to AWS S3
       - name: AWS Deploy push
         run: |
           aws deploy push \
-          --region "us-west-1" \
           --application-name ${{ matrix.appname }} \
           --description "This is a revision for the ${{ matrix.appname }}-${{ github.sha }}" \
           --ignore-hidden-files \
@@ -84,7 +83,6 @@ jobs:
       - name: AWS Create Deployment
         run: |
           aws deploy create-deployment \
-          --region "us-west-1" \
           --application-name ${{ matrix.appname }} \
           --deployment-config-name CodeDeployDefault.OneAtATime \
           --deployment-group-name ${{ matrix.deploy-group }} \
